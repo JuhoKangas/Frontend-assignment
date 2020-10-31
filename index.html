@@ -21,11 +21,22 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm">
+            
+            <div class="col-12 col-sm-8 text-center">
                 <h1>The result</h1>
+                    <div class="numberInput">
+                        <label for="num1">NUM 1</label>
+                        <input type="number" name="num1" id="numOne" oninput="this.value=this.value.slice(0,this.maxLength)" maxLength="5">
+                    </div>
+                    <div id="operator"></div>
+                    <div class="numberInput">
+                        <label for="num2">NUM 2</label>
+                        <input type="number" name="num2" id="numTwo" oninput="this.value=this.value.slice(0,this.maxLength)" maxLength="5">
+                    </div>
+                    <h1 class="result">result</h1>
             </div>
             
-            <div class="col sm">
+            <div class="col-12 col-sm-4 text-center">
                 <input class="btn btn-primary rounded-circle" type="button" value="1">
                 <input class="btn btn-primary rounded-circle" type="button" value="2">
                 <input class="btn btn-primary rounded-circle" type="button" value="3">
@@ -39,7 +50,7 @@
                 <input class="btn btn-primary rounded-circle" type="button" value="9">
                 <br>
                 <i class="fas fa-plus"></i> <i class="fas fa-minus"></i> <i class="fas fa-times"></i> <i class="fas fa-divide"></i>
-
+                <button type="button" class="btn btn-primary">Calculate</button>
             </div>
 
         </div>

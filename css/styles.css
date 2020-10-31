@@ -1,0 +1,22 @@
+.numberInput {
+    display: inline-block;
+}
+
+.numberInput label {
+    display: block;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 1.5rem;
+    border-bottom: blue;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#operator {
+    display: inline-block;
+    padding: 1rem;
+}
