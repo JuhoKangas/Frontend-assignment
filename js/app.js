@@ -1,2 +1,3 @@
-console.log('Hello world');
-
+$(document).ready(function(){
+    
+});
