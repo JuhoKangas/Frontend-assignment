@@ -31,6 +31,7 @@ $(document).ready(function(){
         firstNumFocus = false;
     });
 
+
     //CALCULATE BUTTON HANDLER
     $('#calc').click(function(){
         var calcResult;
@@ -50,7 +51,8 @@ $(document).ready(function(){
         }
     });
 
-    //Handle user specified focus to input numbers correctly and empty previous inputs
+    
+    //HANDLE USER SPECIFIED FOCUS TO INPUT NUMBERS ON FOCUSED FIELDS AND EMPTY PREVIOUS INPUTS
     $('#numOne').focus(function(){
         $('#numOne').val('');
         firstNumFocus = true;
