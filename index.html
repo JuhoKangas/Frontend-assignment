@@ -27,14 +27,14 @@
                         <input class="form-control" type="text" name="num1" id="numOne" maxlength="5" autofocus>
                     </div>
                     <div class="col-12 col-md-4 text-center">
-                        <div id="operator"><i class="fas fa-plus"></i></div>
+                        <div id="operator"></div>
                     </div>
                     <div class="col-12 col-md-4">
                         <label for="num2">NUM 2</label>
                         <input class="form-control" type="text" name="num2" id="numTwo" maxlength="5">
                     </div>
                 </div>
-                <input class="mx-auto" type="text" name="result" id="result" readonly>
+                <input class="mx-auto" type="text" id="result" readonly>
             </div>
            
             <div class="col-12 col-md-4 text-center">
@@ -50,12 +50,12 @@
                 <input type="button" class="btn btn-primary btn-number" value="8"></input> 
                 <input type="button" class="btn btn-primary btn-number" value="9"></input>
                 <br>
-                <button type="button" class="btn-operator btn btn-light"><i class="fas fa-plus"></i></button>
-                <button type="button" class="btn-operator btn btn-light"><i class="fas fa-minus"></i></button>
-                <button type="button" class="btn-operator btn btn-light"><i class="fas fa-times"></i></button>
-                <button type="button" class="btn-operator btn btn-light"><i class="fas fa-divide"></i></button>
+                <button type="button" class="btn-operator btn btn-light" id="plus"><i class="fas fa-plus"></i></button>
+                <button type="button" class="btn-operator btn btn-light" id="minus"><i class="fas fa-minus"></i></button>
+                <button type="button" class="btn-operator btn btn-light" id="times"><i class="fas fa-times"></i></button>
+                <button type="button" class="btn-operator btn btn-light" id="divide"><i class="fas fa-divide"></i></button>
                 <br>
-                <button type="button" id="calculate" class="mt-3 btn btn-lg btn-primary btn-block">Calculate</button>
+                <button type="button" id="calc" class="mt-3 btn btn-lg btn-primary btn-block">Calculate</button>
             </div>
         </div>
     </div>
