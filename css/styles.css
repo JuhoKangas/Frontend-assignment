@@ -6,7 +6,7 @@ body {
     font-size: 1.3rem;
 }
 
-#result {
+.result-box {
     margin: 60px 0;
     font-size: 1.3rem;
     border-bottom: blue;
@@ -18,7 +18,7 @@ body {
     width: 100%;
 }
 
-#operator {
+.operator {
     display: inline-block;
     padding: 1rem;
     font-size: 2rem;

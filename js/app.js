@@ -1,23 +1,23 @@
-$(document).ready(function(){
+$(document).ready(() => {
 
     //INITIALIZING THE APP AND RESETTING ALL THE VALUES ON START/RELOAD
-    var firstNumFocus = true;
-    var operator = '';
-    $('#numOne').val('');
-    $('#numTwo').val('');
-    $('#result').val('');
+    let firstNumFocus = true;
+    let operator = '';
+    $('.numOne').val('');
+    $('.numTwo').val('');
+    $('.result-box').val('');
     
 
     //NUMBER BUTTON HANDLER
     $('.btn-number').click(function(){
         if(firstNumFocus){
             //Limiting the input length to 5
-            if($('#numOne').val().length < 5) {
-                $('#numOne').val ($('#numOne').val() + $(this).val());
+            if($('.numOne').val().length < 5) {
+                $('.numOne').val ($('.numOne').val() + $(this).val());
             } 
         } else {
-            if($('#numTwo').val().length < 5) {
-                $('#numTwo').val ($('#numTwo').val() + $(this).val());
+            if($('.numTwo').val().length < 5) {
+                $('.numTwo').val ($('.numTwo').val() + $(this).val());
             }
         }
     });
@@ -26,40 +26,38 @@ $(document).ready(function(){
     //OPERATOR BUTTON HANDLER
     $('.btn-operator').click(function(){
         operator = $(this).attr('id');
-        $('#operator').html($(this).html());
-        $('#numTwo').focus();
+        $('.operator').html($(this).html());
+        $('.numTwo').focus();
         firstNumFocus = false;
     });
 
 
-    //CALCULATE BUTTON HANDLER
-    $('#calc').click(function(){
-        var calcResult;
+    //OPERATORS
+    const operators = {
+        'plus': (x, y) => x + y,
+        'minus': (x, y) => x - y,
+        'times': (x, y) => x * y,
+        'divide': (x, y) => x / y
+    };
 
-        if (operator === 'plus') {
-            calcResult = parseInt($('#numOne').val()) + parseInt($('#numTwo').val())
-            $('#result').val(calcResult) 
-        } else if (operator === 'minus'){
-            calcResult = parseInt($('#numOne').val()) - parseInt($('#numTwo').val())
-            $('#result').val(calcResult) 
-        } else if (operator === 'times') {
-            calcResult = parseInt($('#numOne').val()) * parseInt($('#numTwo').val())
-            $('#result').val(calcResult) 
-        } else if (operator === 'divide') {
-            calcResult = parseInt($('#numOne').val()) / parseInt($('#numTwo').val())
-            $('#result').val(calcResult) 
-        }
+
+    //CALCULATE BUTTON HANDLER
+    $('.calc').click(() => {
+        let numOne = parseInt($('.numOne').val());
+        let numTwo = parseInt($('.numTwo').val());
+
+        $('.result-box').val(operators[operator](numOne, numTwo));
     });
 
     
     //HANDLE USER SPECIFIED FOCUS TO INPUT NUMBERS ON FOCUSED FIELDS AND EMPTY PREVIOUS INPUTS
-    $('#numOne').focus(function(){
-        $('#numOne').val('');
+    $('.numOne').focus(() => {
+        $('.numOne').val('');
         firstNumFocus = true;
     });
 
-    $('#numTwo').focus(function(){
-        $('#numTwo').val('');
+    $('.numTwo').focus(() => {
+        $('.numTwo').val('');
         firstNumFocus = false;
     });
 });
