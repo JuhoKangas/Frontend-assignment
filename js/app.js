@@ -2,22 +2,26 @@ $(document).ready(() => {
 
     //INITIALIZING THE APP AND RESETTING ALL THE VALUES ON START/RELOAD
     let firstNumFocus = true;
+    let numOne = $('.numOne');
+    let numTwo = $('.numTwo');
+    
     let operator = '';
-    $('.numOne').val('');
-    $('.numTwo').val('');
+    numOne.val('');
+    numTwo.val('');
     $('.result-box').val('');
     
 
     //NUMBER BUTTON HANDLER
     $('.btn-number').click(function(){
+
         if(firstNumFocus){
             //Limiting the input length to 5
-            if($('.numOne').val().length < 5) {
-                $('.numOne').val ($('.numOne').val() + $(this).val());
+            if(numOne.val().length < 5) {
+                numOne.val(numOne.val() + $(this).val());
             } 
         } else {
-            if($('.numTwo').val().length < 5) {
-                $('.numTwo').val ($('.numTwo').val() + $(this).val());
+            if(numTwo.val().length < 5) {
+                numTwo.val(numTwo.val() + $(this).val());
             }
         }
     });
@@ -43,8 +47,8 @@ $(document).ready(() => {
 
     //CALCULATE BUTTON HANDLER
     $('.calc').click(() => {
-        let numOne = parseInt($('.numOne').val());
-        let numTwo = parseInt($('.numTwo').val());
+        numOne = parseInt(numOne.val());
+        numTwo = parseInt(numTwo.val());
 
         $('.result-box').val(operators[operator](numOne, numTwo));
     });
