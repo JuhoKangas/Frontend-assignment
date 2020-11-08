@@ -1,70 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend Assignment</title>
-        
-    <!-- Bootstrap CDN and Font Awesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/9f67e018b0.js" crossorigin="anonymous"></script>
-        
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-
+    <title>OpenWeatherMap API</title>
 </head>
-
 <body>
 
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-12 col-md-8 text-center">
-                <div class="row">
-                    <div class="col">
-                        <label for="num1">NUM 1</label>
-                        <input class="numOne form-control display" type="text" name="num1" maxlength="5" autofocus>
-                    </div>
-                    <div class="col text-center">
-                        <div class="operator"></div>
-                    </div>
-                    <div class="col">
-                        <label for="num2">NUM 2</label>
-                        <input class="numTwo form-control display" type="text" name="num2" maxlength="5">
-                    </div>
-                </div>
-                <input class="mx-auto result-box" type="text" readonly>
-            </div>
-           
-            <div class="col-12 col-md-4 text-center">
-                <input type="button" class="btn btn-primary btn-number" value="1"></input> 
-                <input type="button" class="btn btn-primary btn-number" value="2"></input> 
-                <input type="button" class="btn btn-primary btn-number" value="3"></input>
-                <br>
-                <input type="button" class="btn btn-primary btn-number" value="4"></input>
-                <input type="button" class="btn btn-primary btn-number" value="5"></input> 
-                <input type="button" class="btn btn-primary btn-number" value="6"></input>
-                <br>
-                <input type="button" class="btn btn-primary btn-number" value="7"></input> 
-                <input type="button" class="btn btn-primary btn-number" value="8"></input> 
-                <input type="button" class="btn btn-primary btn-number" value="9"></input>
-                <br>
-                <button type="button" class="btn-operator btn btn-light" id="plus"><i class="fas fa-plus"></i></button>
-                <button type="button" class="btn-operator btn btn-light" id="minus"><i class="fas fa-minus"></i></button>
-                <button type="button" class="btn-operator btn btn-light" id="times"><i class="fas fa-times"></i></button>
-                <button type="button" class="btn-operator btn btn-light" id="divide"><i class="fas fa-divide"></i></button>
-                <br>
-                <button type="button" class="calc mt-4 btn btn-lg btn-primary btn-block">Calculate</button>
-            </div>
-        </div>
-    </div>
-    
+    <p class="weather"></p>
+    <p class="weather2"></p>
 
-    <!-- jQuery and JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 </html>
